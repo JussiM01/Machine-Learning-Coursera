@@ -1,12 +1,35 @@
-function plotData(x, y)
-%PLOTDATA Plots the data points x and y into a new figure 
-%   PLOTDATA(x,y) plots the data points and gives the figure axes labels of
-%   population and profit.
+function plotData(X, y)
+%PLOTDATA Plots the data points X and y into a new figure 
+%   PLOTDATA(x,y) plots the data points with + for the positive examples
+%   and o for the negative examples. X is assumed to be a Mx2 matrix.
 
-plot(x, y, 'rx', 'MarkerSize', 10);         %Plot the data.
-ylabel('Profit in $10,000s');               %Set the y-axis label
-xlabel('Population of cities in 10,00s');   %Set the x-axis label
+% Create New Figure
+figure; hold on;
 
-figure; % open a new figure window
+% ====================== YOUR CODE HERE ======================
+% Instructions: Plot the positive and negative examples on a
+%               2D plot, using the option 'k+' for the positive
+%               examples and 'ko' for the negative examples.
+%
+
+% Find Indices of Positive and Negative Examples
+pos = find(y==1); neg = find(y == 0);
+% Plot Examples
+plot(X(pos, 1), X(pos, 2), 'k+','LineWidth', 2, ...
+'MarkerSize', 7);
+plot(X(neg, 1), X(neg, 2), 'ko', 'MarkerFaceColor', 'y', ...
+'MarkerSize', 7);
+
+
+
+
+
+
+
+% =========================================================================
+
+
+
+hold off;
 
 end
