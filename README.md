@@ -1,2 +1,2 @@
 # Machine Learning Coursera
-Exercise files from Courseras Machine Learning course
+Exercise files from Coursera's Machine Learning course
